@@ -10,7 +10,7 @@ numsteps = 0
 
 route = instructions.split(", ")
 for step in route:
-    numdigits = str(step).__len__()
+    numdigits = len(str(step))
     numsteps = int(step[1:numdigits])
     if step[0] == "R":
         temp = ydiff

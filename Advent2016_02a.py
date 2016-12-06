@@ -8,7 +8,7 @@ passcode = ""
 
 while True:
     string = sys.stdin.readline()
-    if string.__len__() > 1:
+    if len(string) > 1:
         for direction in string:
             if direction == "U":
                 y = max(y-1, 0)

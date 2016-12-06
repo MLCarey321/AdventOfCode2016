@@ -15,7 +15,7 @@ validCountB = 0
 
 while True:
     string = sys.stdin.readline()
-    if string.__len__() > 1:
+    if len(string) > 1:
         sides[lineCounter] = string.split()
         # Part A checks row by row
         if isValidTriangle(sides[lineCounter][0], sides[lineCounter][1], sides[lineCounter][2]):
