@@ -4,12 +4,6 @@ from copy import deepcopy
 from collections import defaultdict
 from itertools import permutations
 
-# initialize floors with Part A input
-floors = [[('thulium', 'generator'), ('thulium', 'microchip'), ('plutonium', 'generator'), ('strontium', 'generator')],
-          [('plutonium', 'microchip'), ('strontium', 'microchip')],
-          [('promethium', 'generator'), ('promethium', 'microchip'), ('ruthenium', 'generator'), ('ruthenium', 'microchip')],
-          []]
-
 
 # Floor is safe if it's empty or doesn't have any generators without a matching microchip
 def safe_floor(floor):
@@ -82,11 +76,18 @@ def process_floor(current_floors, previous_floors, floor_number=0, steps=0):
     return False
 
 
+# Initialize floors with Part A input
+floors = [[('thulium', 'generator'), ('thulium', 'microchip'), ('plutonium', 'generator'), ('strontium', 'generator')],
+          [('plutonium', 'microchip'), ('strontium', 'microchip')],
+          [('promethium', 'generator'), ('promethium', 'microchip'), ('ruthenium', 'generator'), ('ruthenium', 'microchip')],
+          []]
+
 process_floor(floors, floors)
 
-floors[0] += [['elerium', 'generator'],
-              ['elerium', 'microchip'],
-              ['dilithium', 'generator'],
-              ['dilithium', 'microchip']]
+# Add materials to ground floor for Part B
+floors[0] += [('elerium', 'generator'),
+              ('elerium', 'microchip'),
+              ('dilithium', 'generator'),
+              ('dilithium', 'microchip')]
 
 process_floor(floors, floors)
