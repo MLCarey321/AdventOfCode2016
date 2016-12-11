@@ -5,7 +5,10 @@ from collections import defaultdict
 from itertools import permutations
 
 # initialize floors with Part A input
-floors = [[('thulium', 'generator'), ('thulium', 'microchip'), ('plutonium', 'generator'), ('strontium', 'generator')], [('plutonium', 'microchip'), ('strontium', 'microchip')], [('promethium', 'generator'), ('promethium', 'microchip'), ('ruthenium', 'generator'), ('ruthenium', 'microchip')], []]
+floors = [[('thulium', 'generator'), ('thulium', 'microchip'), ('plutonium', 'generator'), ('strontium', 'generator')],
+          [('plutonium', 'microchip'), ('strontium', 'microchip')],
+          [('promethium', 'generator'), ('promethium', 'microchip'), ('ruthenium', 'generator'), ('ruthenium', 'microchip')],
+          []]
 
 
 # Floor is safe if it's empty or doesn't have any generators without a matching microchip
