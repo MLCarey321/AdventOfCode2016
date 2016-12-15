@@ -28,6 +28,6 @@ while True:
         break
 
 print first_start_time(data)
-data.append((7, 11, 0))
+data.append((len(data)+1, 11, 0))
 print first_start_time(data)
 
