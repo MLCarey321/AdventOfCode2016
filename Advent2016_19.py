@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# O(log(n)) solutions for Part 1 of Day #19
+# O(log(n)) solutions for Day #19
 
 max_size = input("? ")
 
