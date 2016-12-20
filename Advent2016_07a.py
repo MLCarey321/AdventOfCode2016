@@ -13,7 +13,8 @@ while True:
     string = sys.stdin.readline()
     if len(string) > 1:
         m = abba.match(string)
-        if abba.match(string) and not notAbba.match(string) and not m.group(1) == m.group(2):
+        n = notAbba.match(string)
+        if m and m.group(1) != m.group(2) and not (n and n.group(1) != n.group(2)):
             count += 1
     else:
         break
